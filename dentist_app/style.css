@@ -1,9 +1,28 @@
+/* VARIABLES */
 :root {
     --primary-black: #414141;
     --primary-white: #F2F2F2;
     --primary-grey: #C2C2C2;
     --secondary-grey: #8E8E93;
     --primary-blue: #64D2FF;
+}
+
+/* FONT FAMILIES */
+.btn-entry,
+.patient-name,
+.patient-three-item p:nth-child(1),
+.patient-three-item p:nth-child(2) 
+{
+    font-family: 'SF Pro Text', sans-serif;
+}
+
+.home h3,
+.entry-text h5,
+.entry-text p,
+.patients-top h6,
+.patient-info-name h5
+{
+    font-family: 'Aeonik TRIAL', sans-serif;
 }
 
 body {
@@ -173,7 +192,6 @@ body {
     padding: 16px 32px 16px 32px;
     border-radius: 24px;
     border: 1px solid var(--primary-grey);
-    font-family: 'SF Pro Text', sans-serif;
     cursor: pointer;
 }
 
@@ -207,7 +225,6 @@ body {
 /* Welcome Text */
 .home h3 {
     position: absolute;
-    font-family: 'Aeonik TRIAL', sans-serif;
     font-weight: 400;
     font-size: 200px;
     color: var(--primary-grey);
@@ -247,7 +264,6 @@ body {
 
 /* Doctor's name Text */
 .entry-text h5 {
-    font-family: 'Aeonik TRIAL', sans-serif;
     font-weight: 600;
     font-size: 36px;
     color: var(--primary-black);
@@ -255,7 +271,6 @@ body {
 }
 
 .entry-text p {
-    font-family: 'Aeonik TRIAL', sans-serif;
     font-weight: 300;
     color: var(--secondary-grey);
     font-size: 14px;
@@ -318,6 +333,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    position: sticky;
 }
 
 .patients-top .btn-entry {
@@ -328,7 +344,6 @@ body {
 .patients-top h6 {
     color: var(--primary-black);
     font-weight: bold;
-    font-family: 'Aeonik TRIAL', sans-serif;
 }
 
 .patient-list {
@@ -340,8 +355,9 @@ body {
     max-height: 500px;
     overflow-y: auto;
     margin-top: 40px;
-    padding: 0 5px 0 5px;
+    padding: 5px 5px 5px 5px;
 }
+
 .patient-list::-webkit-scrollbar {
     width: 8px;
 }
@@ -353,16 +369,18 @@ body {
     width: 100%;
     margin-bottom: 8px;
     padding: 8px 16px 8px 16px;
-    /* border: 1px solid var(--primary-grey); */
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     cursor: pointer;
 }
+
 .patient-item:hover {
     background-color: var(--primary-blue);
     border: none;
 }
-.patient-item img {
+
+.patient-item img,
+.patient-info-name img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -374,10 +392,83 @@ body {
     flex-direction: row;
     width: 70%;
     align-items: center;
-    font-family: 'SF Pro Text', sans-serif;
 }
+
 .patient-name p {
     color: var(--primary-black);
     font-weight: normal;
 }
 
+/* general infos for one patient */
+.section-patient-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;  
+}
+
+.section-patient-info .patients-top {
+    margin: 90px auto 40px auto;
+    width: 80%;
+}
+
+.patient-info-general {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+.patient-info-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* patient name */
+.patient-info-name h5 {
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+.patient-three-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-three-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: -8px;
+}
+
+.patient-three-item p:nth-child(1) {
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+.patient-three-item p:nth-child(2) {
+    font-weight: 200;
+}
+
+/* teeth image */
+.teeth-image-info {
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+}
+
+.ikon-alone {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.7s ease, background-color 0.7s ease;
+}
+
+.ikon-alone:hover {
+    transform: rotate(360deg);
+    background-color: rgba(0, 0, 0, 0.8); 
+}

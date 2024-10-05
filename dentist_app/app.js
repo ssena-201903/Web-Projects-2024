@@ -23,4 +23,45 @@ document.addEventListener("DOMContentLoaded", function () {
                         });
                 })
                 .catch(error => console.log('error loading the JSON file', error));
-});      
+}); 
+
+//THREE D OBJECT 
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer();
+
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+// adding light
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(0, 1, 1).normalize();
+scene.add(light);
+
+//model loader for GLB
+loader.load('human_teeth.glb', function(gltf) {
+        const toothModel = gltf.scene;
+        scene.add(toothModel);
+        
+        // Modeli görünür hale getirmek için pozisyon ve ölçek ayarları
+        toothModel.position.set(0, 0, 0); // Gerekirse pozisyonu ayarlayın
+        toothModel.scale.set(1.5, 1.5, 1.5); // Gerekirse ölçeği ayarlayın
+    
+        // Mouse kontrolleri
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.update();
+    
+        // Render fonksiyonu
+        const animate = function() {
+            requestAnimationFrame(animate);
+            controls.update(); // Kontrol güncellemelerini her animasyonda çağır
+            renderer.render(scene, camera);
+        };
+    
+        animate();
+    });
+    
+
+camera.position.z = 5;
+
+  
