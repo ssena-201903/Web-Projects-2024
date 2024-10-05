@@ -1,0 +1,14 @@
+@media (max-width:768) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(190, 190, 190, 0.195);
+    }
+    .logo button {
+        width: 60px;
+        height: 30px;
+    }
+    
+}

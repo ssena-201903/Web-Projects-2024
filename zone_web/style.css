@@ -1,0 +1,229 @@
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+    font-family: "Urbanist", sans-serif;
+    background-color: rgb(254, 254, 254);
+    background-image: url(big_logo.png);
+    background-repeat: no-repeat;
+    background-position: 470px 150px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(190, 190, 190, 0.195);
+}
+
+.header button {
+    font-size: 20px;
+    color: #928B8B;
+}
+
+.header button:hover,
+.sub-menus a:hover {
+    color: #4F4399;
+    font-weight: 600;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vertical-line {
+    width: 1.5px;
+    height: 40px;
+    background-color: rgb(203, 203, 203);
+    margin-right: 20px;
+    border-radius: 1px;
+}
+
+.logo button {
+    width: 100px;
+    height: 80px;
+}
+
+.btn-logo {
+    background-image: url(zone_logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0;
+    margin-right: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-card {
+    background-color: #CCC8E6;
+    color: #4F4399;
+    font-weight: 400;
+    margin-top: 110px;
+    height: 70px;
+    width: 340px;
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.btn-card:hover {
+    background-color: #8882bd;
+    color: #cfcce4;
+}
+
+.auth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth button {
+    color: #4F4399;
+}
+
+.auth span {
+    font-size: 24px;
+    color: #4F4399;
+}
+
+.sub-menus {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 60px;
+}
+
+.sub-menus a {
+    text-decoration: none;
+    color: #928B8B;
+    font-size: 16px;
+}
+
+.center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+    position: relative; /* Add relative positioning to the parent */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 0;
+    margin-top: 0;
+    width: 400px;
+    background: none;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    color: #4F4399;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card-parag {
+    font-size: 20px;
+    color: #7F7A7A;
+    font-weight: 400;
+}
+
+.images {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* Add relative positioning to the parent */
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 0;
+    margin-left: 40px;
+    width: 400px;
+    height: 400px;
+    position: relative; /* Changed to relative */
+}
+
+.footer {
+    display: flex;
+    width: 400px;
+    justify-content: space-around;
+    margin-left: 60px;
+}
+
+.footer img {
+    height: 30px;
+    width: 30px;
+}
+
+.exchange-rate-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exchange-rate-total p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+#phone-img {
+    height: 450px;
+    z-index: 1; /* Ensures the phone image is on top */
+}
+
+#purple-card, #green-card {
+    height: 300px;
+    position: absolute;
+}
+
+#purple-card {
+    top: 0;
+    left: 0;
+    z-index: 0; /* Purple card will be below the green card */
+    transform: rotate(-10deg);
+}
+
+#green-card {
+    top: 130px; /* Adjust these values to position the second card */
+    left: 100px;
+    z-index: 1; /* Green card will be above the purple card */
+    transform: rotate(10deg);
+}
+
+@media (max-width:768) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo {
+        width: 80px;
+        height: 60px;
+        margin-bottom: 5px;
+    }
+}

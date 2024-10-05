@@ -1,0 +1,328 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #DFFFB7;
+    --secondary-color: #121C78;
+    --white-tone-color: #ffffff;
+    --font-family: "Urbanist", sans-serif; 
+}
+
+/* Sidebar CSS  */
+
+.sidebar {
+    display: flex;
+    flex: 0 0 20%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-family:var(--font-family);
+}
+
+ .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    padding: 20px; 
+    background-color: var(--white-tone-color); 
+    grid-column: 1;
+} 
+
+.logo {
+    display: flex;
+    width: 80%;
+    height: 50px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.logo span {
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+.logo img {
+    max-width: 100%;
+    height: 30px;
+}
+
+.logo h4 {
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    margin-left: 30px;
+}
+
+.search-bar span {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--secondary-color);
+}
+
+.search-bar input { 
+    width: 85%;
+    height: 30px;
+    padding-left: 30px;
+    border-radius: 8px;
+    background-color: var(--white-tone-color);
+}
+
+.search-bar input::placeholder { 
+    width: 80%;
+    height: 30px;
+    padding-left: 20px;
+    color: var(--secondary-color);
+    font-size: 14px;
+}
+
+.sup-menus, .sub-menus {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 20px;
+    width: 100%;
+}
+
+.sub-menus {
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu-item button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background-color: var(--primary-color);
+    border: none;
+    box-sizing: border-box;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.menu-item button:hover {
+    width: 100%;
+    height: 40px;
+    background-color: var(--white-tone-color);
+    border-radius: 8px;
+}
+
+.menu-item span {
+    color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 100%;
+}
+
+.profile span {
+    color: var(--secondary-color);
+    margin-left: 10px;
+}
+
+.picture {
+    height: 45px;
+    width: 45px;
+    border-radius: 30px;
+    background-color: var(--secondary-color);
+    margin-right: 10px;
+}
+
+.names {
+    margin-right: 16px;
+    color: var(--secondary-color);
+}
+
+.names h5 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.names h6 {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* Main Area CSS */
+
+.main {
+    flex: 1;
+}
+
+.main h4,h5,h6 {
+    color: #121C78;
+}
+
+.back-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    color: var(--secondary-color);
+}
+
+.back-menu h6 {
+    margin-left: 16px;
+}
+
+.main-header {
+    font-size: medium;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.main-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 40px;
+    width: 100%;
+    align-items: center;
+}
+
+.main-links a {
+    font-size: 16px;
+    color: #979393;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.main-links a:hover {
+    color: #121C78;
+    font-weight: 600;
+}
+
+#Payment-Method {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+#Payment-Method h5 {
+    font-size: large;
+}
+
+#Payment-Method p, .sub-section-header p {
+    font-size: 14px;
+    color: #979393;
+    font-weight: 300;
+    margin-top: 8px;
+}
+
+.sub-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #9793938e;
+}
+
+.sub-section-header {
+    width: 200px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    margin-left: 120px;
+}
+
+.inputs-double {
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    margin-bottom: 20px;
+}
+
+.inputs input, .input-group select {
+    width: 100%;
+    border: 1px solid #121c7851;
+    border-radius: 4px;
+    height: 37.6px;
+}
+
+.inputs input::placeholder {
+    text-indent: 12px;
+}
+
+.input-group {
+    max-width: 250px;
+}
+
+.input-group .input-group-text {
+    background-color: #f8f9fa;
+    border-radius: 0;
+    border: 1px solid #ced4da;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 8px;
+    pointer-events: none;
+    color: var(--secondary-color);
+}
+
+#Card-Number, #mail {
+    padding-left: 24px; /* İkon ile çakışmaması için sola boşluk ekler */
+    width: 100%;
+}
+
+.add-mail {
+    display: flex;
+    flex-direction: row;
+}
+
+.add-mail span {
+    margin-right: 16px;
+}
+
+
+
+
+

@@ -1,0 +1,383 @@
+:root {
+    --primary-black: #414141;
+    --primary-white: #F2F2F2;
+    --primary-grey: #C2C2C2;
+    --secondary-grey: #8E8E93;
+    --primary-blue: #64D2FF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-white);
+}
+
+.main-doctor {
+    display: flex;
+    flex-direction: row;
+}
+
+/* NAVBAR  */
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 18%;
+    height: 100vh;
+    background-color: var(--primary-black);
+}
+
+.navbar p {
+    color: var(--primary-grey);
+}
+
+/* profile section */
+.section-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    height: fit-content;
+    border-bottom: 1px solid var(--primary-grey);
+    margin: 20px auto 0 16px;
+}
+
+.profile-doctor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-doctor img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pro-names {
+    display: flex;
+    flex-direction: column;
+    margin-right: 24px;
+    margin-left: 16px;
+}
+
+.pro-names p {
+    margin-bottom: 2px;
+}
+
+.pro-names p:first-child {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.pro-names p:last-child {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+/* navbar menus */
+.navbar-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: fit-content;
+}
+
+.top-menu,
+.bottom-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px auto 0 0;
+}
+
+.top-menu {
+    margin-bottom: 10px;
+}
+
+.menu-option-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 8px 16px 8px 16px;
+    margin-left: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.top-menu .menu-option-item:hover {
+    background-color: var(--primary-blue);
+}
+
+.top-menu .menu-option-item:hover p,
+.top-menu .menu-option-item:hover span {
+    color: white;
+    font-weight: 500;
+}
+
+.section-profile .menu-option-item {
+    padding-left: 8px;
+    margin-left: 0;
+}
+
+.section-profile .menu-option-item i {
+    font-size: 14px;
+}
+
+.section-profile .menu-option-item p {
+    font-size: 14px;
+}
+
+.section-profile .menu-option-item:hover p,
+.section-profile .menu-option-item:hover span,
+.bottom-menu .menu-option-item:hover p {
+    color: var(--primary-blue);
+}
+
+/* BUTTONS */
+.btn-menu-item,
+.btn-logout {
+    color: #C2C2C2;
+    margin-right: 16px;
+}
+
+.btn-logout {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-logout:hover {
+    color: var(--primary-blue);
+}
+
+.btn-menu-item span {
+    width: 28px;
+    height: 28px;
+}
+
+/* entry type buttons */
+.btn-entry {
+    background-color: transparent;
+    color: var(--secondary-grey);
+    font-weight: 600;
+    padding: 16px 32px 16px 32px;
+    border-radius: 24px;
+    border: 1px solid var(--primary-grey);
+    font-family: 'SF Pro Text', sans-serif;
+    cursor: pointer;
+}
+
+.btn-entry:hover {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+}
+
+/* HOME */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 82%;
+}
+
+/* HOME TOP */
+/* a div which contains welcome text and pp */
+.relative-home {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Welcome Text */
+.home h3 {
+    position: absolute;
+    font-family: 'Aeonik TRIAL', sans-serif;
+    font-weight: 400;
+    font-size: 200px;
+    color: var(--primary-grey);
+    top: 5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* home doctor's profile picture */
+.entry-pp img {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 3px solid white;
+    margin-top: 70px;
+    top: 120px;
+    left: 530px;
+    border-radius: 50%;
+    margin-bottom: 100px;
+}
+
+/* HOME BOTTOM */
+.home-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+}
+
+/* home all sub texts */
+.entry-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Doctor's name Text */
+.entry-text h5 {
+    font-family: 'Aeonik TRIAL', sans-serif;
+    font-weight: 600;
+    font-size: 36px;
+    color: var(--primary-black);
+    margin-bottom: 40px;
+}
+
+.entry-text p {
+    font-family: 'Aeonik TRIAL', sans-serif;
+    font-weight: 300;
+    color: var(--secondary-grey);
+    font-size: 14px;
+}
+
+.entry-text p:nth-child(1) {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 30px 0;
+}
+
+.paragraph span {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+/* SECTION PATIENTS */
+.section-patients {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 32%;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 40px 20px 20px;
+    border-right: 1px solid var(--secondary-grey);
+}
+
+.menu-header {
+    margin-bottom: 20px;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* header icon (back arrow) */
+.menu-header span {
+    margin-right: 16px;
+    color: var(--secondary-grey);
+}
+
+.menu-header i {
+    font-size: 16px;
+}
+
+/* header text */
+.menu-header h5 {
+    color: var(--secondary-grey);
+}
+
+.patients-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.patients-top .btn-entry {
+    padding: 4px 20px 4px 20px;
+    font-size: 14px;
+}
+
+.patients-top h6 {
+    color: var(--primary-black);
+    font-weight: bold;
+    font-family: 'Aeonik TRIAL', sans-serif;
+}
+
+.patient-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 40px;
+    padding: 0 5px 0 5px;
+}
+.patient-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.patient-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px 16px 8px 16px;
+    /* border: 1px solid var(--primary-grey); */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.patient-item:hover {
+    background-color: var(--primary-blue);
+    border: none;
+}
+.patient-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.patient-name {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    align-items: center;
+    font-family: 'SF Pro Text', sans-serif;
+}
+.patient-name p {
+    color: var(--primary-black);
+    font-weight: normal;
+}
+

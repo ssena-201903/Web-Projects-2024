@@ -1,0 +1,6 @@
+<svg width="300" height="50" xmlns="http://www.w3.org/2000/svg">
+
+  <line x1="0" y1="25" x2="100" y2="25" stroke="teal" stroke-width="1" stroke-linecap="round"/>
+  <text x="120" y="30" font-family="Arial" font-size="16" fill="#007BA7">3. ÜNİTE</text>
+
+</svg>

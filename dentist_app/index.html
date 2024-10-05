@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Dentist App</title>
+
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- flatpickr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- DOCTOR SCREEN -->
+    <div class="main-doctor">
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <!-- profile section on navbar -->
+            <div class="section-profile">
+                <div class="profile-doctor">
+                    <img src="doc_pp.jpg" alt="doctor_pp">
+                    <div class="pro-names">
+                        <p>Joe Atlas</p>
+                        <p>joe.atlas@gmail.com</p>
+                    </div>
+                    <div class="btn-logout"><span><i class="fa-solid fa-right-from-bracket"></i></span></div>
+                </div>
+                <div class="menu-option-item">
+                    <div class="btn-menu-item"><span><i class="fa-solid fa-pencil"></i></span></div>
+                    <p>Edit Profile</p>
+                </div>
+            </div>
+            <!-- navbar menu all items -->
+            <div class="navbar-menu">
+                <!-- navbar top menu -->
+                <div class="top-menu">
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-house"></i></span></div>
+                        <p>Home</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-bed-pulse"></i></span></div>
+                        <p>Urgent Patients</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-bell"></i></span></div>
+                        <p>Notifications</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-calendar"></i></span></div>
+                        <p>Future Events</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-dollar-sign"></i></span></div>
+                        <p>Payment and Billing</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-clock-rotate-left"></i></span></div>
+                        <p>Appointment History</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <div class="btn-menu-item"><span><i class="fa-solid fa-chart-column"></i></span></div>
+                        <p>Statistics and Reports</p>
+                    </div>
+                </div>
+                <!-- navbar bottom menu -->
+                <div class="bottom-menu">
+                    <div class="menu-option-item">
+                        <p>Privates & Security</p>
+                    </div>
+                    <div class="menu-option-item">
+                        <p>About Clinic</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- HOME -->
+        <!-- <div class="home"> -->
+        <!-- home top -->
+        <!-- <div class="relative-home">
+                <h3>Welcome !</h3>
+                <div class="entry-pp">
+                    <img src="doc_pp.jpg" alt="">
+                </div>
+            </div> -->
+        <!-- home button -->
+        <!-- <div class="home-bottom">
+                <div class="entry-text">
+                    <h5>Joe Atlas</h5>
+                    <div class="paragraph">
+                        <p>Today you have <span>8</span> patients, if you're ready... Let's start!</p>
+                        <p>You can see other settings from the menu</p>
+                    </div>
+                </div>
+                <div class="entry-buttons">
+                    <button class="btn-entry">Go To Future Events</button>
+                </div>
+            </div> -->
+
+        <!-- the section for choosing patient -->
+        <div class="section-patients">
+            <div class="menu-header">
+                <h5><span><i class="fa-solid fa-chevron-left"></i></span>Future Events</h5>
+            </div>
+            <div class="patients-top">
+                <h6>Today</h6>
+                <div class="btn-entry">Pick a date</div>
+            </div>
+            <!-- patients list -->
+            <div class="patient-list">
+                <!-- <div class="patient-item">
+                    <div class="patient-name">
+                        <img src="doc_pp.jpg" alt="">
+                        <p>David Cooper</p>
+                    </div>
+                    <p>02:10 pm</p>
+                </div> -->
+            </div>
+        </div>
+        <!-- the section for showing info of patients -->
+        <!-- <div class="section-patient-info">
+
+        </div> -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 700" width="1350" height="700">
+
+  <!-- Sol Turuncu Dikdörtgen -->
+  <rect x="0" y="0" width="400" height="250" fill="#f7941d" />
+  
+  <!-- Eğik Mavi Dikdörtgen -->
+  <polygon points="400,0 1350,0 1350,250 360,250" fill="#007ba7" />
+  
+  <!-- 1. Beyaz Eğik Çizgi -->
+  <polygon points="400,0 410,0 360,250 350,250" fill="white"/>
+
+  <!-- "3. ÜNİTE" Yazısı -->
+  <text x="200" y="130" font-family="Arial" font-size="120" font-weight="bold" fill="white" stroke="#007ba7" stroke-width="4" text-anchor="middle">
+    3.
+  </text>
+  <text x="180" y="200" font-family="Arial" font-size="60" font-weight="bold" fill="white" stroke="#007ba7" stroke-width="3" text-anchor="middle">
+    ÜNİTE
+  </text>
+  
+  <!-- "AKIŞKANLAR" Yazısı -->
+  <text x="800" y="140" font-family="Arial" font-size="80" font-weight="bold" fill="white" text-anchor="middle">
+    AKIŞKANLAR
+  </text>
+
+  <!-- Açık Mavi Bölge -->
+  <rect x="0" y="258" width="1350" height="700" fill="#add8e6" />
+
+  <!-- 2. Beyaz Eğik Çizgi -->
+  <polygon points="350,258 360,258 500,1200 490,1200" fill="white"/>
+
+</svg>
