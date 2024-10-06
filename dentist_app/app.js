@@ -1,3 +1,7 @@
+// import * as THREE from 'three';
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+// import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 const patient_list = document.querySelector(".patient-list");
 
 // get patient list items
@@ -26,42 +30,82 @@ document.addEventListener("DOMContentLoaded", function () {
 }); 
 
 //THREE D OBJECT 
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+// Three.js ve diğer bileşenleri kullanmak için global olarak tanımlayın
+let scene, camera, renderer, controls, loader;
 
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+// Fonksiyonları tanımla
+function init() {
+    // Sahneyi oluştur
+    scene = new THREE.Scene();
 
-// adding light
-const light = new THREE.DirectionalLight(0xffffff, 1);
-light.position.set(0, 1, 1).normalize();
-scene.add(light);
+    // Kamerayı oluştur
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    
+    // Canvas'ı seç
+    const canvas = document.querySelector('#toothCanvas');
+    
+    // WebGL Renderer oluştur
+    renderer = new THREE.WebGLRenderer({ canvas: canvas });
+    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-//model loader for GLB
-loader.load('human_teeth.glb', function(gltf) {
+    // Orbit Controls oluştur
+    controls = new THREE.OrbitControls(camera, renderer.domElement); // Burayı güncelledik
+
+    // Işık ekle
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(0, 1, 1).normalize();
+    scene.add(light);
+
+    // GLTF Loader oluştur
+    loader = new THREE.GLTFLoader();
+    
+    // Modeli yükle
+    loader.load('teeth.glb', function(gltf) {
         const toothModel = gltf.scene;
         scene.add(toothModel);
         
-        // Modeli görünür hale getirmek için pozisyon ve ölçek ayarları
-        toothModel.position.set(0, 0, 0); // Gerekirse pozisyonu ayarlayın
-        toothModel.scale.set(1.5, 1.5, 1.5); // Gerekirse ölçeği ayarlayın
-    
-        // Mouse kontrolleri
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.update();
-    
-        // Render fonksiyonu
-        const animate = function() {
-            requestAnimationFrame(animate);
-            controls.update(); // Kontrol güncellemelerini her animasyonda çağır
-            renderer.render(scene, camera);
-        };
-    
+        // Modelin pozisyon ve ölçek ayarları
+        toothModel.position.set(0, 0, 0);
+        toothModel.scale.set(1.5, 1.5, 1.5);
+        
+        // Animasyonu başlat
         animate();
     });
-    
 
-camera.position.z = 5;
+    // Kamerayı ayarla
+    camera.position.z = 5;
+}
+
+// Animasyon fonksiyonu
+function animate() {
+    requestAnimationFrame(animate);
+    controls.update();
+    renderer.render(scene, camera);
+}
+
+// Başlatma fonksiyonunu çağır
+init();
+
+
+//highlighting the selected tooth
+// const raycaster = new THREE.Raycaster();
+// const mouse = new THREE.Vector2();
+
+// function onMouseClick(event) {
+//     mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+//     mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+//     raycaster.setFromCamera(mouse, camera);
+
+//     const intersects = raycaster.intersectObjects(scene.children, true);
+
+//     if (intersects.length > 0) {
+//         // Seçilen dişin rengini değiştir veya işaretle
+//         intersects[0].object.material.color.set(0xff0000);
+//     }
+// }
+
+// window.addEventListener('click', onMouseClick, false);
+
 
   

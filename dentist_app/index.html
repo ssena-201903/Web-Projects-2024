@@ -14,14 +14,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- flatpickr -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"
+        integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!-- 3D Library -->
+    <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/controls/OrbitControls.js"></script>
+
+<!-- OrbitControls -->
+<script src="https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js"></script>
+
+<!-- GLTFLoader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/loaders/GLTFLoader.js"></script>
+
+        
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -160,15 +167,23 @@
                     </div>
                 </div>
             </div>
-            <div class="teeth-image-info"></div>
-            <div class="ikon-alone">
-                <i class="fa-solid fa-rotate-left"></i>
+            <div class="teeth-image-info">
+                <canvas id="toothCanvas"></canvas>
+            </div>
+            <div class="icon-alone" title="360°">
+                <i class="fa-solid fa-rotate-left rotate-icon"></i>
             </div>
         </div>
     </div>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/loaders/GLTFLoader.js"></script> -->
+    <!-- <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
+          }
+        }
+      </script> -->
 
     <script src="app.js"></script>
 
